@@ -1,0 +1,38 @@
+{
+  "cargo_build": "not_executed_toolchain_absent",
+  "cargo_tests": "not_executed_toolchain_absent",
+  "limitations": [
+    "synthetic final fixture known to experiment author",
+    "reference solver is separate from Rust synthesizer",
+    "no native Rust compilation",
+    "no autonomous multi-round meta-learning qualification",
+    "no independently held external task set"
+  ],
+  "original_rust_learning_proven": "no",
+  "python_reference_dev_paired_shared_work_reduction": 0.065574,
+  "python_reference_discovered_concept": "(+ v0 v0)",
+  "python_reference_final_solved_baseline": 0,
+  "python_reference_final_solved_upgraded": 2,
+  "python_reference_learning": "executed",
+  "python_reference_negative_control_accepted": false,
+  "python_reference_positive_control": true,
+  "python_test_groups_passed": {
+    "test_native_gate_v08": 3,
+    "test_release": 9,
+    "test_v05": 19,
+    "test_v07": 15,
+    "test_v09": 9,
+    "test_v100": 14,
+    "test_v110": 13,
+    "test_v120": 18,
+    "test_v130": 13,
+    "test_v140": 13
+  },
+  "python_test_groups_scope": "individual test modules, not full historical suite; no native Rust tests",
+  "reference_report_path": "EVIDENCE_REFERENCE_V140.json",
+  "reference_report_replay": "passed",
+  "release": "1.4.0",
+  "rust_toolchain_present": false,
+  "synthetic_fixture_is_independent_external_holdout": false,
+  "validation_date_utc": "2026-10-21T03:54:02.590517+00:00"
+}

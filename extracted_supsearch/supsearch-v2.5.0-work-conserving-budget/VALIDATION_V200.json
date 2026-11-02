@@ -1,0 +1,36 @@
+{
+  "version": "2.0.0",
+  "based_on": "supsearch-v1.9.0-reuse-aware-promotion-FULL-UPGRADED.zip",
+  "date": "2026-10-21",
+  "features": [
+    "optional adaptive training-only curriculum policy",
+    "shared max-built ceiling for composed and raw-fallback training searches",
+    "curriculum selection journals",
+    "fail-closed curriculum consistency auditor",
+    "additional Rust and Python regression tests"
+  ],
+  "python_full_suite": {
+    "status": "passed",
+    "test_count": 250,
+    "command": "python -m unittest discover -s tests -p 'test_*.py'",
+    "exit_code": 0
+  },
+  "python_v200_suite": {
+    "status": "passed",
+    "test_count": 12,
+    "command": "python -m unittest discover -s tests -p 'test_v200.py'"
+  },
+  "native_rust": {
+    "compile": "not_executed",
+    "cargo_test": "not_executed",
+    "reason": "cargo and rustc not installed in packaging environment"
+  },
+  "native_autonomous_learning_campaign": "not_executed",
+  "independent_external_transfer": "not_executed",
+  "known_limitations": [
+    "Policy feedback is a training-task proxy, not a learned meta-policy with demonstrated cross-domain transfer.",
+    "Journal integrity is internal consistency only, not independent attestation.",
+    "Candidate expansions do not represent full CPU or elapsed-time costs.",
+    "Rust module and integration modifications have not been compiled or natively tested."
+  ]
+}

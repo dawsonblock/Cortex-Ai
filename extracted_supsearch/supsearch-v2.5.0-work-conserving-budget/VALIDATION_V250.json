@@ -1,0 +1,57 @@
+{
+  "changes": [
+    "default-on per-task shared soft time allowance across concept and raw fallback",
+    "zero-time raw fallback prohibited",
+    "self-reported timing receipts and independent Python consistency auditor",
+    "native-binary nonempty-library probe and CI wiring",
+    "Rust and Python regression cases"
+  ],
+  "checks": {
+    "full_historical_python_suite": {
+      "note": "exceeded execution limit; do not infer overall success",
+      "status": "timed_out"
+    },
+    "independent_transfer_benchmarks": {
+      "status": "not_executed"
+    },
+    "native_concept_learning": {
+      "status": "not_executed"
+    },
+    "native_rust_compile": {
+      "reason": "Rust/Cargo not installed",
+      "status": "not_executed"
+    },
+    "native_rust_tests": {
+      "reason": "Rust/Cargo not installed",
+      "status": "not_executed"
+    },
+    "python_compileall": {
+      "scope": "scripts and tests",
+      "status": "passed"
+    },
+    "targeted_python_tests": {
+      "count": 112,
+      "modules": [
+        "test_v170",
+        "test_v180",
+        "test_v190",
+        "test_v200",
+        "test_v210",
+        "test_v220",
+        "test_v230",
+        "test_v240",
+        "test_v250"
+      ],
+      "status": "passed"
+    }
+  },
+  "limits": [
+    "time checks inside search engine are periodic, so not a hard OS-level deadline",
+    "self-reported ledger integrity does not independently attest execution",
+    "candidate expansions and wall clock measure different budget dimensions",
+    "unseen-task transfer remains unproven"
+  ],
+  "release": "2.5.0",
+  "scope": "Experimental complete source upgrade, not native-qualified",
+  "source_based_on": "supsearch-v2.4.0-nonempty-fallback-FULL-UPGRADED.zip"
+}

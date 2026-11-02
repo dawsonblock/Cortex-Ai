@@ -1,0 +1,82 @@
+[
+  {
+    "duration": "completed in extended isolated run",
+    "name": "test_external_replay_v06.py",
+    "output": "ody_label\": \"local_no_detected_prefix_overlap_not_independent\",\n  \"example_overlap_pairs\": 0\n}\n{\n  \"phase\": \"trained\",\n  \"audit\": {\n    \"runs\": 1,\n    \"candidate_trials\": 1,\n    \"promotions\": 1,\n    \"final_test_seen\": false,\n    \"dangling_intents\": [],\n    \"consistent\": true\n  },\n  \"lineage\": {\n    \"initial_concepts\": 0,\n    \"promotions\": 1,\n    \"final_concepts\": 1,\n    \"append_only_reconciled\": true\n  }\n}\n{\n  \"candidate_origin\": \"native_mining_only\",\n  \"caution\": \"Separate custodial administration must be independently documented; no evidence of general-purpose intelligence.\",\n  \"claimed_independent_validation\": false,\n  \"concept_pair\": {\n    \"baseline_solved\": 0,\n    \"exact_mcnemar_two_sided_p\": 0.5,\n    \"jointly_solved_count\": 0,\n    \"jointly_solved_geometric_work_ratio\": null,\n    \"newly_solved\": [\n      \"final_a\",\n      \"final_b\"\n    ],\n    \"note\": \"Only concept-versus-concept is a same-algorithm comparison; task fixtures remain local.\",\n    \"paired_built_baseline\": 0,\n    \"paired_built_improvement_fraction\": null,\n    \"paired_built_upgraded\": 0,\n    \"paired_success_bootstrap_95pct\": [\n      1.0,\n      1.0\n    ],\n    \"paired_success_difference\": 1.0,\n    \"regressions\": [],\n    \"tasks\": 2,\n    \"upgraded_solved\": 2\n  },\n  \"counterbalanced\": false,\n  \"custody_label\": \"local_no_detected_prefix_overlap_not_independent\",\n  \"evaluator_elapsed_seconds\": 2.633101876999717,\n  \"promotions\": 1,\n  \"raw_reference_solved\": 0,\n  \"result_hashes\": {\n    \"results/concept_baseline.jsonl\": \"cc0cd032de0dd26e587486a40eadd8a244f309ee0baf02ffb4edd4bb70d0bba0\",\n    \"results/concept_upgraded.jsonl\": \"8aeb15c2feead28e23b15c51cf09474b98d4e9b5ff7eb0f6bab56c48a9e3bce4\",\n    \"results/raw_reference.jsonl\": \"2756e32a05f18ad8b4a696409744c900e2f2b424752afcc661a662278e2f6370\"\n  },\n  \"schema\": \"external-replay-v1\",\n  \"status\": \"evaluator_side_replay_not_automatically_independent\",\n  \"tasks\": 2,\n  \"trial_key\": \"8ec3acb7afcee7d2c03c9a23fbb94ba30e49a17c95b5c1e17e615ba92046e9e6\"\n}\n{\n  \"phase\": \"frozen\",\n  \"run\": \"/tmp/tmpm6m_9yhv/training-run\",\n  \"train\": 2,\n  \"dev\": 2,\n  \"test\": 1,\n  \"custody_label\": \"local_no_detected_prefix_overlap_not_independent\",\n  \"example_overlap_pairs\": 0\n}\n{\n  \"phase\": \"trained\",\n  \"audit\": {\n    \"runs\": 1,\n    \"candidate_trials\": 1,\n    \"promotions\": 1,\n    \"final_test_seen\": false,\n    \"dangling_intents\": [],\n    \"consistent\": true\n  },\n  \"lineage\": {\n    \"initial_concepts\": 0,\n    \"promotions\": 1,\n    \"final_concepts\": 1,\n    \"append_only_reconciled\": true\n  }\n}\n",
+    "returncode": 0,
+    "status": "passed",
+    "test_count": 11
+  },
+  {
+    "duration": 3.61,
+    "name": "test_native_gate_v08.py",
+    "output": "\n----------------------------------------------------------------------\nRan 3 tests in 0.009s\n\nOK\n",
+    "returncode": 0,
+    "status": "passed",
+    "test_count": 3
+  },
+  {
+    "duration": 12.14,
+    "name": "test_qualified_pipeline.py",
+    "output": "xample_count\": {\n      \"dev_a\": 1,\n      \"final_a\": 1,\n      \"final_b\": 1,\n      \"train_a\": 1,\n      \"train_b\": 1\n    },\n    \"task_examples_sha256\": {\n      \"dev_a\": \"b4fe11f6e88ca7cf4c669e7de43bc8be828da2297bdd1c75162fbf528c744ad2\",\n      \"final_a\": \"b082957f8caf7be8bbae7777240805d058cb21b07c336ce88918f47a7cf2092d\",\n      \"final_b\": \"c9b6b6633bdf58522613a1eb8819a633fdd77ffdb12fd89e00e1ed679f4e2a1e\",\n      \"train_a\": \"a35dac52466162d081fb7a2621c4e93b9ed8d085c92ad5dd84ffa8fa9d0fed65\",\n      \"train_b\": \"11d324a8f9454e1953b5941c98e2abac25ede1fe63d05b85dfb8c67da4b6ff33\"\n    }\n  },\n  \"concept_pair\": {\n    \"tasks\": 2,\n    \"baseline_solved\": 0,\n    \"upgraded_solved\": 2,\n    \"paired_success_difference\": 1.0,\n    \"paired_success_bootstrap_95pct\": [\n      1.0,\n      1.0\n    ],\n    \"exact_mcnemar_two_sided_p\": 0.5,\n    \"jointly_solved_geometric_work_ratio\": null,\n    \"jointly_solved_count\": 0,\n    \"newly_solved\": [\n      \"final_a\",\n      \"final_b\"\n    ],\n    \"regressions\": [],\n    \"paired_built_baseline\": 0,\n    \"paired_built_upgraded\": 0,\n    \"paired_built_improvement_fraction\": null,\n    \"note\": \"Only concept-versus-concept is a same-algorithm comparison; task fixtures remain local.\"\n  },\n  \"raw_reference\": {\n    \"solved\": 0,\n    \"task_count\": 2\n  },\n  \"results_sha256\": {\n    \"concept_baseline\": \"cc0cd032de0dd26e587486a40eadd8a244f309ee0baf02ffb4edd4bb70d0bba0\",\n    \"concept_upgraded\": \"8aeb15c2feead28e23b15c51cf09474b98d4e9b5ff7eb0f6bab56c48a9e3bce4\",\n    \"raw_reference\": \"2756e32a05f18ad8b4a696409744c900e2f2b424752afcc661a662278e2f6370\"\n  },\n  \"binary_sha256\": \"f59af5374e1a99f8cb72621e51ed2163108faad99d66d05d7668f9b66790f268\",\n  \"statistical_caution\": \"Paired descriptive analysis only; McNemar ignores task-family dependence and selection; bootstrap assumes exchangeable tasks; not independent replication.\"\n}\n{\n  \"phase\": \"frozen\",\n  \"run\": \"/tmp/tmpccd8eisg/r1\",\n  \"train\": 2,\n  \"dev\": 1,\n  \"test\": 2,\n  \"custody_label\": \"local_no_detected_prefix_overlap_not_independent\",\n  \"example_overlap_pairs\": 0\n}\n{\n  \"phase\": \"trained\",\n  \"audit\": {\n    \"runs\": 1,\n    \"candidate_trials\": 1,\n    \"promotions\": 1,\n    \"final_test_seen\": false,\n    \"dangling_intents\": [],\n    \"consistent\": true\n  },\n  \"lineage\": {\n    \"initial_concepts\": 0,\n    \"promotions\": 1,\n    \"final_concepts\": 1,\n    \"append_only_reconciled\": true\n  }\n}\n\nqualification error: train is single-use; start another qualified run\nqualification error: final evaluation is single-use and requires completed training\nqualification error: supsearch binary no longer matches frozen digest\nqualification error: run directory exists; create a new run ID instead of overwriting\nqualification error: report metrics disagree with evaluation data\nqualification error: EXACT content duplicate across tasks train_a and final_a\nqualification error: split ID overlap\nqualification error: frozen input changed: sealed_test/final_a.tsk\n----------------------------------------------------------------------\nRan 9 tests in 9.333s\n\nOK\n",
+    "returncode": 0,
+    "status": "passed",
+    "test_count": 9
+  },
+  {
+    "duration": 3.19,
+    "name": "test_release.py",
+    "output": "\n----------------------------------------------------------------------\nRan 9 tests in 0.008s\n\nOK\n",
+    "returncode": 0,
+    "status": "passed",
+    "test_count": 9
+  },
+  {
+    "duration": 10.93,
+    "name": "test_transfer_campaign_v08.py",
+    "output": "{\n  \"phase\": \"frozen\",\n  \"run\": \"/tmp/tmpsnllz7zo/training-run\",\n  \"train\": 2,\n  \"dev\": 2,\n  \"test\": 1,\n  \"custody_label\": \"local_no_detected_prefix_overlap_not_independent\",\n  \"example_overlap_pairs\": 0\n}\n{\n  \"phase\": \"trained\",\n  \"audit\": {\n    \"runs\": 1,\n    \"candidate_trials\": 1,\n    \"promotions\": 1,\n    \"final_test_seen\": false,\n    \"dangling_intents\": [],\n    \"consistent\": true\n  },\n  \"lineage\": {\n    \"initial_concepts\": 0,\n    \"promotions\": 1,\n    \"final_concepts\": 1,\n    \"append_only_reconciled\": true\n  }\n}\n{\n  \"candidate_origin\": \"native_mining_only\",\n  \"caution\": \"Separate custodial administration must be independently documented; no evidence of general-purpose intelligence.\",\n  \"claimed_independent_validation\": false,\n  \"concept_pair\": {\n    \"baseline_solved\": 0,\n    \"exact_mcnemar_two_sided_p\": 0.5,\n    \"jointly_solved_count\": 0,\n    \"jointly_solved_geometric_work_ratio\": null,\n    \"newly_solved\": [\n      \"final_a\",\n      \"final_b\"\n    ],\n    \"note\": \"Only concept-versus-concept is a same-algorithm comparison; task fixtures remain local.\",\n    \"paired_built_baseline\": 0,\n    \"paired_built_improvement_fraction\": null,\n    \"paired_built_upgraded\": 0,\n    \"paired_success_bootstrap_95pct\": [\n      1.0,\n      1.0\n    ],\n    \"paired_success_difference\": 1.0,\n    \"regressions\": [],\n    \"tasks\": 2,\n    \"upgraded_solved\": 2\n  },\n  \"counterbalanced\": true,\n  \"custody_label\": \"local_no_detected_prefix_overlap_not_independent\",\n  \"evaluator_elapsed_seconds\": 6.289112817999921,\n  \"promotions\": 1,\n  \"raw_reference_solved\": 0,\n  \"result_hashes\": {\n    \"results/concept_baseline__final_a.jsonl\": \"4427e0c4634843638286d4c7befb2fe6c481c295738fe9cffe9b1b33d04c8b1f\",\n    \"results/concept_baseline__final_b.jsonl\": \"8e2ec5f03c89621ba0a9e31293e5a125361e7964bd35ec241947e2c009ebf04d\",\n    \"results/concept_upgraded__final_a.jsonl\": \"beac447171cce7bb7c4a57959f1a619c9d6f6fcb984e844c2f0adb0df3f75815\",\n    \"results/concept_upgraded__final_b.jsonl\": \"d65a6cfb927736ba0efc1b886bc487e1a18d341a2d865f85d4f554dee34af15c\",\n    \"results/raw_reference__final_a.jsonl\": \"ef42cdaade661c7e598ef4acad26208dc18420fb61c375331d6ac120d77ff797\",\n    \"results/raw_reference__final_b.jsonl\": \"b5c569160e177578befec1d9973a33e0b03108563fbcc7240ab9f4efdae23f9e\"\n  },\n  \"schema\": \"external-replay-v1\",\n  \"status\": \"evaluator_side_replay_not_automatically_independent\",\n  \"tasks\": 2,\n  \"trial_key\": \"3e73374a2eee92771ac26ba62dd793df7d4fd126f269448ba922690e92f7fc84\"\n}\n{\"status\": \"protocol_frozen\", \"tasks\": 24, \"written\": \"/tmp/tmp32fvmw55/frozen.json\"}\n\ntransfer campaign rejected: output must have an existing parent and must not already exist\n----------------------------------------------------------------------\nRan 16 tests in 7.954s\n\nOK\n",
+    "returncode": 0,
+    "status": "passed",
+    "test_count": 16
+  },
+  {
+    "duration": 3.11,
+    "name": "test_v04.py",
+    "output": "{\n  \"label\": \"synthetic_fixture_not_holdout\",\n  \"cross_split_example_overlaps\": [\n    {\n      \"left\": \"prod_dev3\",\n      \"left_split\": \"dev\",\n      \"right\": \"prod_train3\",\n      \"right_split\": \"train\",\n      \"shared_example_count\": 3,\n      \"left_fraction\": 1.0,\n      \"right_fraction\": 1.0,\n      \"identical_example_sets\": true\n    },\n    {\n      \"left\": \"prod_dev4\",\n      \"left_split\": \"dev\",\n      \"right\": \"prod_final4\",\n      \"right_split\": \"test\",\n      \"shared_example_count\": 3,\n      \"left_fraction\": 1.0,\n      \"right_fraction\": 1.0,\n      \"identical_example_sets\": true\n    }\n  ],\n  \"cross_split_id_families\": [\n    \"prod\"\n  ],\n  \"task_example_count\": {\n    \"prod_dev3\": 3,\n    \"prod_dev4\": 3,\n    \"prod_final4\": 3,\n    \"prod_final5\": 3,\n    \"prod_train2\": 3,\n    \"prod_train3\": 3\n  },\n  \"task_examples_sha256\": {\n    \"prod_dev3\": \"d29f2d209fbd9cb963d99cddd5baec050a3fd752885c4a4d290c1b518134c801\",\n    \"prod_dev4\": \"3471266e3aa13da0e16f972d6662a472feccea6abdea81269a99f7f82c222aef\",\n    \"prod_final4\": \"3471266e3aa13da0e16f972d6662a472feccea6abdea81269a99f7f82c222aef\",\n    \"prod_final5\": \"6f7adb2b5b8ea3a080739f288de54f420293ded6ecc97d6620ee8bf7ddde6ea1\",\n    \"prod_train2\": \"b06376ad8a0383e9fd6e6adf8bf864590e54f04014d60b4559653b8eb2accb02\",\n    \"prod_train3\": \"d29f2d209fbd9cb963d99cddd5baec050a3fd752885c4a4d290c1b518134c801\"\n  }\n}\n\nqualification error: cross-split example leakage (use --fixture-mode only for labeled demonstrations): prod_dev3:prod_train3, prod_dev4:prod_final4\n----------------------------------------------------------------------\nRan 10 tests in 0.055s\n\nOK\n",
+    "returncode": 0,
+    "status": "passed",
+    "test_count": 10
+  },
+  {
+    "duration": 3.25,
+    "name": "test_v05.py",
+    "output": "\n----------------------------------------------------------------------\nRan 19 tests in 0.042s\n\nOK\n",
+    "returncode": 0,
+    "status": "passed",
+    "test_count": 19
+  },
+  {
+    "duration": 7.7,
+    "name": "test_v07.py",
+    "output": "{\n  \"phase\": \"frozen\",\n  \"run\": \"/tmp/tmp86ohdy44/training-run\",\n  \"train\": 2,\n  \"dev\": 2,\n  \"test\": 1,\n  \"custody_label\": \"local_no_detected_prefix_overlap_not_independent\",\n  \"example_overlap_pairs\": 0\n}\n{\n  \"phase\": \"trained\",\n  \"audit\": {\n    \"runs\": 1,\n    \"candidate_trials\": 1,\n    \"promotions\": 1,\n    \"final_test_seen\": false,\n    \"dangling_intents\": [],\n    \"consistent\": true\n  },\n  \"lineage\": {\n    \"initial_concepts\": 0,\n    \"promotions\": 1,\n    \"final_concepts\": 1,\n    \"append_only_reconciled\": true\n  }\n}\n{\n  \"candidate_origin\": \"native_mining_only\",\n  \"caution\": \"Separate custodial administration must be independently documented; no evidence of general-purpose intelligence.\",\n  \"claimed_independent_validation\": false,\n  \"concept_pair\": {\n    \"baseline_solved\": 0,\n    \"exact_mcnemar_two_sided_p\": 0.5,\n    \"jointly_solved_count\": 0,\n    \"jointly_solved_geometric_work_ratio\": null,\n    \"newly_solved\": [\n      \"final_a\",\n      \"final_b\"\n    ],\n    \"note\": \"Only concept-versus-concept is a same-algorithm comparison; task fixtures remain local.\",\n    \"paired_built_baseline\": 0,\n    \"paired_built_improvement_fraction\": null,\n    \"paired_built_upgraded\": 0,\n    \"paired_success_bootstrap_95pct\": [\n      1.0,\n      1.0\n    ],\n    \"paired_success_difference\": 1.0,\n    \"regressions\": [],\n    \"tasks\": 2,\n    \"upgraded_solved\": 2\n  },\n  \"counterbalanced\": false,\n  \"custody_label\": \"local_no_detected_prefix_overlap_not_independent\",\n  \"evaluator_elapsed_seconds\": 2.99892929699854,\n  \"promotions\": 1,\n  \"raw_reference_solved\": 0,\n  \"result_hashes\": {\n    \"results/concept_baseline.jsonl\": \"cc0cd032de0dd26e587486a40eadd8a244f309ee0baf02ffb4edd4bb70d0bba0\",\n    \"results/concept_upgraded.jsonl\": \"8aeb15c2feead28e23b15c51cf09474b98d4e9b5ff7eb0f6bab56c48a9e3bce4\",\n    \"results/raw_reference.jsonl\": \"2756e32a05f18ad8b4a696409744c900e2f2b424752afcc661a662278e2f6370\"\n  },\n  \"schema\": \"external-replay-v1\",\n  \"status\": \"evaluator_side_replay_not_automatically_independent\",\n  \"tasks\": 2,\n  \"trial_key\": \"8ec3acb7afcee7d2c03c9a23fbb94ba30e49a17c95b5c1e17e615ba92046e9e6\"\n}\n{\n  \"key_created\": \"/tmp/tmp86ohdy44/independent-custodian-secret.bin\",\n  \"key_must_remain_evaluator_private\": true\n}\n{\n  \"claimed_independent_validation\": false,\n  \"key_id\": \"74ad274d15013009\",\n  \"sealed\": true,\n  \"trial_key\": \"8ec3acb7afcee7d2c03c9a23fbb94ba30e49a17c95b5c1e17e615ba92046e9e6\"\n}\n{\n  \"authenticated_evidence\": true,\n  \"claimed_independent_validation\": false,\n  \"key_id\": \"74ad274d15013009\",\n  \"trial_key\": \"8ec3acb7afcee7d2c03c9a23fbb94ba30e49a17c95b5c1e17e615ba92046e9e6\"\n}\n\nattested replay rejected: HMAC or evidence-manifest mismatch\n----------------------------------------------------------------------\nRan 15 tests in 4.823s\n\nOK\n",
+    "returncode": 0,
+    "status": "passed",
+    "test_count": 15
+  },
+  {
+    "duration": 3.58,
+    "name": "test_v09.py",
+    "output": "\n----------------------------------------------------------------------\nRan 9 tests in 0.033s\n\nOK\n",
+    "returncode": 0,
+    "status": "passed",
+    "test_count": 9
+  },
+  {
+    "duration": 3.23,
+    "name": "test_v100.py",
+    "output": "\n----------------------------------------------------------------------\nRan 14 tests in 0.003s\n\nOK\n",
+    "returncode": 0,
+    "status": "passed",
+    "test_count": 14
+  }
+]

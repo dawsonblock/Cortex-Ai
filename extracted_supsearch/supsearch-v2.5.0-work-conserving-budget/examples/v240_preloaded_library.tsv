@@ -1,0 +1,2 @@
+# Deliberately preloaded fixture: this multiplication expression is supplied, not autonomously learned.
+probe_seed_mul	2	λa.λb.λc.b(a(c))

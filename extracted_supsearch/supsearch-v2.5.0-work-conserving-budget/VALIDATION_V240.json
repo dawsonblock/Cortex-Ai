@@ -1,0 +1,24 @@
+{
+  "base_archive": "supsearch-v2.3.0-reserved-fallback-FULL-UPGRADED.zip",
+  "independent_transfer_benchmark": "NOT EXECUTED",
+  "learning_claim": "No newly demonstrated autonomous native learning or generalization",
+  "native_code_modified": true,
+  "native_nonempty_fallback_smoke": "NOT EXECUTED",
+  "native_rust_tests": "NOT EXECUTED",
+  "python_syntax_check": "passed",
+  "python_test_command": "python3 -m unittest discover -s tests -q",
+  "python_test_duration_seconds": 67.296,
+  "python_test_exit_status": 0,
+  "python_tests_passed": 297,
+  "release": "supsearch-v2.4.0",
+  "run_native_commands": [
+    "cargo test --locked --offline",
+    "cargo build --release --locked --offline",
+    "python3 scripts/native_reserved_fallback_v240.py --binary ./target/release/supsearch --source . --out /tmp/supsearch-v240-reserved-native",
+    "python3 scripts/native_gate.py --source . --out /tmp/supsearch-v240-full-gate"
+  ],
+  "rust_compilation": "NOT EXECUTED: cargo and rustc not installed",
+  "scope": "Full source package plus nonempty-library reserved-fallback native test and Python receipt check",
+  "targeted_new_tests_passed": 12,
+  "verification_boundary": "Python audit and source checks alone cannot validate native Rust behavior"
+}

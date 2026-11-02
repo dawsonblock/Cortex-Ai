@@ -1,0 +1,33 @@
+{
+  "artifact_kind": "complete experimental research source, NOT native-qualified",
+  "autonomous_learning_improvement_demonstrated": false,
+  "based_on": "supsearch-v0.9.0-native-leakage-transfer-FULL-UPGRADED.zip",
+  "features": [
+    "native-only candidate acceptance guard",
+    "source-labeled trial and promotion intents",
+    "finite-example independent application/normalization path (same NBE semantics)",
+    "train/final and dev/final structural overlap rejection after learning",
+    "strict internal candidate trial/promotion provenance checks",
+    "qualified pipeline schema-v6 origin checks",
+    "native-only qualification CLI and extra regression tests"
+  ],
+  "independent_external_holdout_evaluated": false,
+  "native_rust_compilation_executed": false,
+  "native_rust_unit_tests_executed": false,
+  "non_claims": [
+    "no compiled Rust evidence",
+    "no native autonomy campaign",
+    "no verified improvements to out-of-distribution generalization",
+    "locally generated provenance can be fabricated and is not an external attestation"
+  ],
+  "python_protocol_tests": {
+    "execution": "all ten modules executed individually; all passed; earlier combined discovery invocation timed out",
+    "modules": 10,
+    "record": "TEST_RUNS_v100.json",
+    "status": "passed",
+    "synthetic_and_mock_fixtures": true,
+    "total_test_count": 115
+  },
+  "release": "supsearch-v1.0.0-candidate-provenance-solution-recheck",
+  "rust_cargo_available": false
+}

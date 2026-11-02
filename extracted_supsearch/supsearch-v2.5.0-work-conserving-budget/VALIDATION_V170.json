@@ -1,0 +1,46 @@
+{
+  "based_on": "supsearch-v1.6.0-native-learning-qualification-FULL-UPGRADED.zip",
+  "claim_boundary": "Python tests and archive integrity only; no native Rust qualification or general intelligence claims.",
+  "implementation": [
+    "count native composed search expansions even on failure before raw fallback",
+    "record development baseline and candidate-arity trial expansions in native journal",
+    "schema-8 round totals and work receipt reconciliation",
+    "reject malformed or missing accounting receipts",
+    "report minimum amortization repeats and upper-bound net search expansion savings",
+    "native campaign runner requiring complete cost receipts"
+  ],
+  "qualification_scope": "experimental research source",
+  "release": "supsearch-v1.7.0-measured-learning-cost",
+  "tests": {
+    "historical_python_unittest_suite": {
+      "log": "v170-full-tests.log",
+      "note": "run before separately added 2 v170 campaign tests",
+      "passed_tests": 216,
+      "status": "passed"
+    },
+    "independent_external_transfer": {
+      "status": "not_run"
+    },
+    "native_learning_benchmark": {
+      "status": "not_run"
+    },
+    "native_rust_compilation": {
+      "reason": "cargo and rustc not available",
+      "status": "not_run"
+    },
+    "new_native_campaign_mock_tests": {
+      "passed_tests": 2,
+      "qualification": "Python test double only",
+      "status": "passed"
+    },
+    "rust_unit_tests": {
+      "reason": "cargo and rustc not available",
+      "status": "not_run"
+    },
+    "v170_cost_audit_tests": {
+      "included_in_historical_suite_216": true,
+      "passed_tests": 17,
+      "status": "passed"
+    }
+  }
+}

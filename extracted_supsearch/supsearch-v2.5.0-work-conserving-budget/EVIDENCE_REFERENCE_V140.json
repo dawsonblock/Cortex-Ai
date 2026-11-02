@@ -1,0 +1,143 @@
+{
+  "result": {
+    "development": {
+      "after": {
+        "dev_left_offset": {
+          "built": 28,
+          "retained": 23,
+          "solution": "(+ (C0 (C0 v0)) v1)",
+          "solved": true
+        },
+        "dev_right_offset": {
+          "built": 29,
+          "retained": 24,
+          "solution": "(+ (C0 (C0 v1)) v0)",
+          "solved": true
+        }
+      },
+      "before": {
+        "dev_left_offset": {
+          "built": 27,
+          "retained": 16,
+          "solution": "(+ (+ (+ v0 v0) v0) (+ v0 v1))",
+          "solved": true
+        },
+        "dev_right_offset": {
+          "built": 34,
+          "retained": 19,
+          "solution": "(+ (+ (+ v0 v1) v1) (+ v1 v1))",
+          "solved": true
+        }
+      },
+      "metrics": {
+        "after_solved": 2,
+        "before_solved": 2,
+        "lost_solved": [],
+        "new_solved": [],
+        "paired_shared_search_work_after": 57,
+        "paired_shared_search_work_before": 61,
+        "paired_shared_work_reduction": 0.065574,
+        "severe_search_regressions": []
+      }
+    },
+    "discovery": {
+      "candidate_count": 1,
+      "chosen_source_tasks": [
+        "train_double_x",
+        "train_double_y"
+      ],
+      "definition": "(+ v0 v0)",
+      "method": "repeated_solved_subexpression",
+      "template_definition_checked": true,
+      "training_all_solved": true
+    },
+    "experiment": "supsearch-python-reference-v140",
+    "final": {
+      "after": {
+        "final_three_sum": {
+          "built": 227,
+          "retained": 163,
+          "solution": "(+ (+ v1 v2) (C0 (C0 v0)))",
+          "solved": true
+        },
+        "final_three_sum_rotated": {
+          "built": 223,
+          "retained": 161,
+          "solution": "(+ (+ v0 v2) (C0 (C0 v1)))",
+          "solved": true
+        }
+      },
+      "before": {
+        "final_three_sum": {
+          "built": 183,
+          "retained": 55,
+          "solution": null,
+          "solved": false
+        },
+        "final_three_sum_rotated": {
+          "built": 183,
+          "retained": 55,
+          "solution": null,
+          "solved": false
+        }
+      },
+      "metrics": {
+        "after_solved": 2,
+        "before_solved": 0,
+        "lost_solved": [],
+        "new_solved": [
+          "final_three_sum",
+          "final_three_sum_rotated"
+        ],
+        "paired_shared_search_work_after": 0,
+        "paired_shared_search_work_before": 0,
+        "paired_shared_work_reduction": 0.0,
+        "severe_search_regressions": []
+      }
+    },
+    "independent_external_holdout": false,
+    "max_built_per_solve": 30000,
+    "max_size": 9,
+    "min_dev_work_reduction": 0.05,
+    "native_rust_executed": false,
+    "negative_control": {
+      "accepted": false,
+      "definition": "v0",
+      "metrics": {
+        "after_solved": 2,
+        "before_solved": 2,
+        "lost_solved": [],
+        "new_solved": [],
+        "paired_shared_search_work_after": 89,
+        "paired_shared_search_work_before": 61,
+        "paired_shared_work_reduction": -0.459016,
+        "severe_search_regressions": [
+          "dev_left_offset",
+          "dev_right_offset"
+        ]
+      }
+    },
+    "outcome_is_general_intelligence_evidence": false,
+    "promotion": {
+      "accepted": true,
+      "concept": "(+ v0 v0)"
+    },
+    "qualification_scope": "bundled synthetic reference experiment ONLY",
+    "schema_version": 1,
+    "training": {
+      "train_double_x": {
+        "built": 2,
+        "retained": 2,
+        "solution": "(+ v0 v0)",
+        "solved": true
+      },
+      "train_double_y": {
+        "built": 5,
+        "retained": 5,
+        "solution": "(+ v1 v1)",
+        "solved": true
+      }
+    }
+  },
+  "sha256": "ee71e67890589ec11842a7c66c6b30d54abb8c424f8c8e8cc0d669165d582876"
+}

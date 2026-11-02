@@ -1,0 +1,49 @@
+{
+  "fixes": [
+    "replace non-exhaustive Rust match for invalid Some(composed_solution) with verified fallback",
+    "raw fallback on absent or invalid composed candidate; account for both searches",
+    "independently recheck raw candidate before supplying it to the mining corpus",
+    "refuse symlinked candidate input; bound actual candidate read size",
+    "add Rust regression tests for valid/invalid/missing composed candidates, invalid raw result, and Unix symlink candidate"
+  ],
+  "limitations": [
+    "Finite-example rechecks do not prove universal program correctness.",
+    "Candidate source-file symlink checks are not secure against hostile concurrent file mutation; isolate untrusted workloads.",
+    "The original v1.7 cost model counts candidate expansions, not all CPU/memory/verification overhead.",
+    "The copied historical evidence files remain historical, not proof of v1.8 native execution."
+  ],
+  "release": "supsearch-v1.8.0-corrected-native-fallback",
+  "scope": "experimental full-source ZIP; Rust native qualifications remain unverified",
+  "source_base": "supsearch-v1.7.0-measured-learning-cost-FULL-UPGRADED.zip",
+  "tests": {
+    "full_python_unittest_suite": {
+      "count": 223,
+      "duration_seconds": 198.116,
+      "note": "protocol/source-level tests, not Rust qualification",
+      "status": "passed"
+    },
+    "independent_external_transfer": {
+      "status": "not_run"
+    },
+    "native_learning_campaign": {
+      "status": "not_run"
+    },
+    "new_native_rust_regression_tests": {
+      "count": 5,
+      "status": "added_not_run"
+    },
+    "new_v180_static_source_checks": {
+      "count": 5,
+      "status": "passed"
+    },
+    "rust_cargo_test": {
+      "reason": "cargo/rustc absent; no network access to install toolchain",
+      "status": "not_run"
+    },
+    "rust_release_build": {
+      "reason": "cargo/rustc absent",
+      "status": "not_run"
+    }
+  },
+  "utc_created": "2026-10-21T09:32:27.236718+00:00"
+}

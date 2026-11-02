@@ -1,0 +1,141 @@
+name: Native and state-budget protocol qualification
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  rust:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Check Rust test suite
+        run: cargo test --locked
+      - name: Build optimized native binary
+        run: cargo build --release --locked
+      - name: Native qualification gate (full Rust executable, not mock)
+        if: runner.os == 'Linux'
+        run: python3 scripts/native_gate.py --source . --out "${RUNNER_TEMP}/supsearch-native-gate"
+      - name: v2.1 corrected native qualification wiring check
+        if: runner.os == 'Linux'
+        run: python3 -m unittest discover -s tests -p 'test_v210.py' -v
+      - name: v1.5 native same-algorithm paired evaluation smoke
+        if: runner.os == 'Linux'
+        run: |
+          python3 scripts/native_paired_v150.py \
+            --binary ./target/release/supsearch \
+            --tasks-dir bench --tasks cnat_add \
+            --baseline-library examples/v150_empty.tsv \
+            --learned-library examples/v150_empty.tsv \
+            --out-dir "${RUNNER_TEMP}/supsearch-v150-paired" \
+            --budget 0.05 --max-size 4 --fuel 1000 --max-built 100
+      - name: v1.7 local native learning with cost receipts (not a holdout)
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          set -eu
+          mkdir -p "${RUNNER_TEMP}/supsearch-v160-final"
+          cp bench/ctre_rev.tsk "${RUNNER_TEMP}/supsearch-v160-final/ctre_rev.tsk"
+          python3 scripts/native_learning_campaign_v170.py \
+            --binary ./target/release/supsearch \
+            --learn-tasks bench --train cnat_add --dev cnat_mul \
+            --final-tasks "${RUNNER_TEMP}/supsearch-v160-final" --final ctre_rev \
+            --baseline-library examples/v150_empty.tsv \
+            --out-dir "${RUNNER_TEMP}/supsearch-v170-campaign" \
+            --rounds 1 --budget 0.05 --max-size 4 --max-built 1000 --fuel 1000
+      - name: Native evaluator smoke and no-clobber regression
+        shell: bash
+        run: |
+          set -eu
+          mkdir -p out/native-smoke
+          ./target/release/supsearch evaluate bench --tasks cnat_add --mode raw \
+            --out out/native-smoke/raw.jsonl --budget 0.05 --max-size 4 --fuel 1000
+          python3 -c 'import json; p="out/native-smoke/raw.jsonl"; x=[json.loads(s) for s in open(p)]; assert x[0]["event"]=="evaluation_meta" and x[0]["schema_version"]==5 and len(x)==2'
+          if ./target/release/supsearch evaluate bench --tasks cnat_add --mode raw \
+            --out out/native-smoke/raw.jsonl --budget 0.05 --max-size 4 --fuel 1000; then
+            echo 'ERROR: native evaluator overwrote result' >&2; exit 1
+          fi
+  protocol:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: v1.5 same-algorithm and cost-accounting tests
+        run: python3 -m unittest discover -s tests -p 'test_v150.py' -v
+      - name: v1.6 campaign protocol and adversarial tests
+        run: python3 -m unittest discover -s tests -p 'test_v160.py' -v
+      - name: v2.0 adaptive-curriculum protocol and CLI smoke
+        run: |
+          python3 -m unittest discover -s tests -p 'test_v200.py' -v
+          python3 scripts/curriculum_audit_v200.py --help
+      - name: v2.1 native admission and curriculum protocol regressions
+        run: python3 -m unittest discover -s tests -p 'test_v210.py' -v
+      - name: v2.4 real nonempty-library native fallback probe
+        if: runner.os == 'Linux'
+        run: |
+          python3 scripts/native_reserved_fallback_v240.py \
+            --binary ./target/release/supsearch --source . \
+            --out "${RUNNER_TEMP}/supsearch-v240-reserve-native"
+      - name: v2.3 reserved-raw-budget audit and adversarial tests
+        run: |
+          python3 -m unittest discover -s tests -p 'test_v230.py' -v
+          python3 scripts/search_budget_audit_v230.py --help
+      - name: v2.5 native shared-deadline smoke
+        if: runner.os == 'Linux'
+        run: |
+          python3 scripts/native_shared_deadline_v250.py \
+            --binary ./target/release/supsearch --source . \
+            --out "${RUNNER_TEMP}/supsearch-v250-shared-deadline"
+      - name: v2.5 protocol and adversarial deadline checks
+        run: python3 -m unittest discover -s tests -p 'test_v250.py' -v
+      - name: v2.4 guarded fallback receipt tests (no Rust execution)
+        run: python3 -m unittest discover -s tests -p 'test_v240.py' -v
+      - name: v2.2 concept compression and family-gate receipt checks
+        run: |
+          python3 -m unittest discover -s tests -p 'test_v220.py' -v
+          python3 scripts/concept_admission_audit_v220.py --help
+      - name: v1.9 reuse-promotion receipt and adversarial tests
+        run: |
+          python3 -m unittest discover -s tests -p 'test_v190.py' -v
+          python3 scripts/reuse_promotion_audit_v190.py --help
+      - name: v1.8 source-wiring protocol checks (not native compilation)
+        run: python3 -m unittest discover -s tests -p 'test_v180.py' -v
+      - name: v1.7 measured-work and campaign adversarial tests
+        run: |
+          python3 -m unittest discover -s tests -p 'test_v170.py' -v
+          python3 -m unittest discover -s tests -p 'test_v170_campaign.py' -v
+      - name: Python governance tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Candidate provenance verifier CLI entrypoint
+        run: python3 scripts/candidate_lineage_v100.py --help
+      - name: Attested replay CLI entrypoint
+        run: python3 scripts/attested_replay.py --help
+      - name: Native qualification CLI entrypoint
+        run: python3 scripts/native_gate.py --help
+      - name: External replay CLI entrypoint
+        run: python3 scripts/external_replay.py --help
+      - name: Campaign and task-map CLI entrypoints
+        run: |
+          python3 scripts/create_task_map.py --help
+          python3 scripts/transfer_campaign.py --help
+      - name: v1.3 state-budget auditor smoke
+        run: python3 scripts/state_budget_audit_v130.py --help
+      - name: Inventory matches source
+        run: python3 scripts/check_manifest.py .
+      - name: Supplied synthetic fixture must be rejected as a holdout
+        shell: bash
+        run: |
+          if python3 scripts/qualified_pipeline.py audit-splits \
+            --source examples/curriculum \
+            --train prod_train2,prod_train3 \
+            --dev prod_dev3,prod_dev4 \
+            --test prod_final4,prod_final5; then
+            echo 'ERROR: known leaking example admitted' >&2
+            exit 1
+          fi

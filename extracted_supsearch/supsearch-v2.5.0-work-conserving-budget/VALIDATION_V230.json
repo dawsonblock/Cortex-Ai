@@ -1,0 +1,38 @@
+{
+  "all_in_one_legacy_python_suite": {
+    "pass_claim": false,
+    "status": "timed_out"
+  },
+  "feature": "opt-in reserved raw fallback under shared native learning search-state cap",
+  "independent_transfer": {
+    "learning_gains_demonstrated": false,
+    "status": "not_run"
+  },
+  "isolated_large_regression_groups": {
+    "pass_claim": false,
+    "status": "timed_out"
+  },
+  "measured_at_utc": "2026-10-22T01:43:04.059879+00:00",
+  "native_rust": {
+    "cargo_build": "not_run",
+    "cargo_test": "not_run",
+    "compiler_available": false,
+    "native_learning": "not_run"
+  },
+  "python_executed": [
+    {
+      "command": "python -m unittest discover -s tests -p test_v230.py -q",
+      "status": "passed",
+      "tests": 15
+    },
+    {
+      "command": "python -m unittest discover -s tests -p test_v220.py -q",
+      "status": "passed",
+      "tests": 14
+    }
+  ],
+  "release": "2.3.0",
+  "release_qualification": "experimental_not_native_qualified",
+  "scope": "source-level upgrade and locally executed Python protocol tests",
+  "source_base": "supsearch-v2.2.0-concept-quality-native-qualification-FULL-UPGRADED.zip"
+}

@@ -1,0 +1,39 @@
+{
+  "release": "supsearch-v2.1.0-learning-reliability",
+  "source": "supsearch-v2.0.0-adaptive-curriculum-budgeted-FULL-UPGRADED.zip",
+  "verified_in_current_environment": {
+    "targeted_python_suites": {
+      "status": "passed",
+      "total": 55,
+      "modules": {
+        "test_v170.py": 17,
+        "test_v180.py": 5,
+        "test_v190.py": 15,
+        "test_v200.py": 12,
+        "test_v210.py": 6
+      }
+    },
+    "python_ast_parseable_files": 45,
+    "full_legacy_python_suite": {
+      "status": "timed_out",
+      "claimed_pass": false
+    },
+    "cargo_present": false,
+    "rustc_present": false,
+    "native_rust_compilation": "not_executed",
+    "native_rust_unit_tests": "not_executed",
+    "native_learning_benchmark": "not_executed",
+    "independent_transfer": "not_executed"
+  },
+  "corrected": [
+    "adaptive repeated-first-solve reward inflation",
+    "native qualification gate schema mismatch v7 vs v8",
+    "preexisting temp file clobber/unlink in Rust atomic writes"
+  ],
+  "limitations": [
+    "The new Rust code is not compiled in this environment.",
+    "Static Python wiring tests do not validate Rust behavior.",
+    "Old complete Python suite exceeded execution limit.",
+    "No evidence of independent generalization or payback."
+  ]
+}

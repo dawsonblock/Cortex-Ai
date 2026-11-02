@@ -1,0 +1,50 @@
+{
+  "artifact_kind": "complete experimental Rust research source, native not qualified",
+  "based_on": "supsearch-v1.0.0-candidate-provenance-solution-recheck-FULL-UPGRADED.zip",
+  "changes": [
+    "structured bounded promotion journal recovery parser",
+    "cooperative single-writer lock",
+    "commit/library reconciliation",
+    "journal event phase validation",
+    "independently executable Python journal preflight",
+    "13 new Python negative/positive tests",
+    "native Rust regression unit tests added but not run"
+  ],
+  "claims_not_supported": [
+    "native algorithm correctness qualification",
+    "autonomous learning improvements",
+    "out-of-distribution transfer gains",
+    "cryptographic authenticity of local journal"
+  ],
+  "independent_holdout": {
+    "status": "not_executed"
+  },
+  "independent_transfer_benchmark": {
+    "status": "not_executed"
+  },
+  "limitations": [
+    "Rust and Python parsers not proven equivalent",
+    "journal lock is cooperative and crash recovery manual",
+    "source SHA-256 manifest is not a signature",
+    "local experiments cannot establish independent evaluation"
+  ],
+  "native_learning_campaign": {
+    "status": "not_executed"
+  },
+  "python_protocol_tests": {
+    "command": "python3 -m unittest discover -s tests -q",
+    "count": 131,
+    "includes_mock_and_synthetic": true,
+    "modules": 11,
+    "source_log": "development-session /mnt/data/supsearch-v110-tests.log",
+    "status": "passed"
+  },
+  "release": "supsearch-v1.1.0-transaction-safe-native-learning",
+  "rust_compilation": {
+    "reason": "cargo/rustc not installed in authoring environment",
+    "status": "not_executed"
+  },
+  "rust_unit_tests": {
+    "status": "not_executed"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "autonomous_mining_reproduced": false,
+  "cargo_build": "not_executed",
+  "cargo_tests": "not_executed",
+  "evaluation_context": "packaging-local",
+  "full_python_discovery": "timed_out_at_120_seconds_not_qualified",
+  "independent_holdout_evaluation": false,
+  "main_limitations": [
+    "Rust native source changes are uncompiled in this runtime",
+    "No fresh concept transfer measurements",
+    "Paired-receipt examples in tests are synthetic",
+    "Per-invocation state cap does not bound normalization runtime or full learning-campaign cost"
+  ],
+  "python_compilation": "passed",
+  "python_tests_failed": 0,
+  "python_tests_passed": 67,
+  "release": "1.3.0",
+  "rust_toolchain_present": false,
+  "state_capped_native_run": "not_executed",
+  "tested_python_modules": [
+    "tests.test_v130",
+    "tests.test_v120",
+    "tests.test_v09",
+    "tests.test_v100",
+    "tests.test_v110"
+  ],
+  "validation_date": "2026-10-20"
+}

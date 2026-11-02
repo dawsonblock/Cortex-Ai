@@ -1,0 +1,59 @@
+{
+  "checks": {
+    "end_to_end_native_learning_campaign": {
+      "status": "not_run"
+    },
+    "independent_transfer_holdout": {
+      "status": "not_run"
+    },
+    "native_rust_compilation": {
+      "reason": "Rust/Cargo not installed",
+      "status": "not_run"
+    },
+    "native_rust_unit_tests": {
+      "reason": "Rust/Cargo not installed",
+      "status": "not_run"
+    },
+    "python_compile": {
+      "files": [
+        "scripts/native_learning_campaign_v160.py",
+        "scripts/task_custody.py",
+        "tests/test_v160.py"
+      ],
+      "status": "passed"
+    },
+    "python_unittest_discover": {
+      "command": "python3 -m unittest discover -s tests -v",
+      "status": "passed",
+      "tests": 199,
+      "wall_time_seconds": 110.247
+    },
+    "v150_targeted": {
+      "status": "passed_separately",
+      "tests": 8
+    },
+    "v160_specific": {
+      "native_double_only": true,
+      "status": "passed_as_part_of_full_suite",
+      "tests": 16
+    }
+  },
+  "claim_boundary": "Python protocol tests and source integrity only. Positive generalization and native-learning results are not demonstrated.",
+  "created_date": "2026-10-21",
+  "implementation_scope": [
+    "v1.5 complete source retained",
+    "native learn-to-evaluate campaign orchestrator",
+    "promotion-origin journal audit",
+    "disjoint family and example-based final task leakage screen",
+    "all-final-task work accounting",
+    "test-double qualification separation",
+    "CI native smoke job"
+  ],
+  "package_test": {
+    "sha256_inventory": "verified_by_release_packager",
+    "zip_integrity": "verified_by_release_packager"
+  },
+  "release": "supsearch-v1.6.0-native-learning-qualification",
+  "source_archive": "supsearch-v1.5.0-native-paired-transfer-FULL-UPGRADED.zip",
+  "source_archive_sha256": "4aa16b23dd8cc9c118fe203582e20d1e30ccad4f086fce68b2663ba7cb9fb57a"
+}

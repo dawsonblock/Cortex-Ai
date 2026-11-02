@@ -1,0 +1,6 @@
+{
+  "name": "Supsearch Studio & Image Synthesis Lab",
+  "description": "Interactive analysis, LamBench synthesizer, test qualification suite, and AI image creation & editing studio for Supsearch v2.5.0.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

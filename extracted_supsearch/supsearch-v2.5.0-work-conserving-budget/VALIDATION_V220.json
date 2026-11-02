@@ -1,0 +1,54 @@
+{
+  "base": "supsearch-v2.1.0-learning-reliability-FULL-UPGRADED.zip",
+  "modified_components": [
+    "src/main.rs",
+    "src/learning.rs",
+    "scripts/native_gate.py",
+    "tests/test_v210.py",
+    "Cargo.toml",
+    "Cargo.lock",
+    ".github/workflows/ci.yml",
+    "README.md",
+    "RELEASE_NOTES.md"
+  ],
+  "new_components": [
+    "src/mdl.rs",
+    "scripts/concept_admission_audit_v220.py",
+    "tests/test_v220.py",
+    "docs/V220_CONCEPT_QUALITY_QUALIFICATION.md"
+  ],
+  "new_features": [
+    "optional_training_corpus_ast_mdl_gate",
+    "optional_development_family_diversity_gate",
+    "native_qualification_admission_receipt_check"
+  ],
+  "notes": [
+    "Python tests do not compile or execute the Rust learning engine.",
+    "MDL compression and positive-family checks are optional heuristic gates, disabled by default.",
+    "Candidate expansions are an incomplete proxy for true computation costs.",
+    "Independent holdout validation is not performed."
+  ],
+  "python_test_suite": {
+    "passed": 270,
+    "result": "passed",
+    "run": "python3 -m unittest discover -s tests -q",
+    "seconds": 74.466,
+    "tests": 270
+  },
+  "python_v220_tests": {
+    "passed": 14,
+    "result": "passed",
+    "run": "python3 -m unittest discover -s tests -p test_v220.py -q"
+  },
+  "release": "supsearch-v2.2.0",
+  "rust": {
+    "cargo_present": false,
+    "compiled": false,
+    "independent_transfer_verified": false,
+    "native_learning_benchmark_executed": false,
+    "qualification_preflight": "failed_as_expected_no_cargo",
+    "rustc_present": false,
+    "unit_tests_executed": false
+  },
+  "status": "experimental_source_upgrade_not_native_qualified"
+}

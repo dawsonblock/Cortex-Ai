@@ -1,0 +1,24 @@
+{
+  "result": {
+    "dev_batch_repeats_to_recoup_experiment": 54,
+    "dev_work_savings_per_full_repeated_batch": 4,
+    "development_baseline_builds": 61,
+    "development_learned_builds": 57,
+    "development_negative_control_builds": 89,
+    "final_all_task_work_delta": -84,
+    "final_lost_solved": 0,
+    "final_new_solved": 2,
+    "final_total_work_baseline": 366,
+    "final_total_work_learned": 450,
+    "independent_holdout": false,
+    "learning_cost_includes_negative_control": true,
+    "native_rust_executed": false,
+    "note": "full-work costs include failed attempts and represent build counts, not time; comparisons over task families are synthetic and not independent",
+    "qualification_scope": "bundled synthetic Python reference only",
+    "reference_v140_sha256": "ee71e67890589ec11842a7c66c6b30d54abb8c424f8c8e8cc0d669165d582876",
+    "schema": "reference-amortization-v150",
+    "total_pre_final_experimental_builds": 214,
+    "training_candidate_builds": 7
+  },
+  "sha256": "2082c8e74930a7db0543130c7ffa7a1fa6cf63eccfeb334bdfa5240622bbb30f"
+}

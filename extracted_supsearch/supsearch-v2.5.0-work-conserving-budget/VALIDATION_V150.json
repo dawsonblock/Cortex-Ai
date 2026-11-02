@@ -1,0 +1,34 @@
+{
+  "additional_prior_selected_test_groups": {
+    "test_release.py": 9,
+    "test_v05.py": 19,
+    "test_v07.py": 15,
+    "test_v09.py": 9,
+    "test_v100.py": 14,
+    "test_v110.py": 13,
+    "test_v120.py": 18,
+    "test_v130.py": 13
+  },
+  "full_historical_unittest_discovery": "not completed; v1.4 baseline full run previously timed out",
+  "generated_at_utc": "2026-10-21T04:05:17.766801+00:00",
+  "independent_external_holdout": false,
+  "native_pair_scope": "NOT proof of source compilation, independent evaluator custody, or transfer performance",
+  "native_rust_tests_executed": false,
+  "original_native_Rust_files_retained": true,
+  "reason_native_unverified": "Cargo and rustc absent in packaging environment",
+  "release": "1.5.0",
+  "rust_compiled": false,
+  "same_algorithm_native_pair": "implemented and tested with labeled script test double, not executed against real native Rust binary",
+  "synthetic_reference_work": {
+    "caution": "reference-only synthetic tasks; work includes unsuccessful searches",
+    "dev_batch_work_before": 61,
+    "dev_batch_work_with_learned": 57,
+    "synthetic_final_newly_solved": 2,
+    "synthetic_final_work_baseline": 366,
+    "synthetic_final_work_with_learned": 450,
+    "training_plus_dev_plus_negative_control": 214
+  },
+  "targeted_tests_passed": 131,
+  "v140_python_tests": 13,
+  "v150_new_python_tests": 8
+}

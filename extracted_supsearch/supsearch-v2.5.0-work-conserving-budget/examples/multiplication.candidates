@@ -1,0 +1,4 @@
+// A known Church multiplication combinator, supplied as a fixture.
+// The learner must independently measure development-task value.
+// This is NOT a new concept discovered by this demonstration.
+λa.λb.λc.b(a(c))

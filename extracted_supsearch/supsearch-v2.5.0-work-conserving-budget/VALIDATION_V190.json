@@ -1,0 +1,45 @@
+{
+  "release": "supsearch-v1.9.0-reuse-aware-promotion",
+  "base": "supsearch-v1.8.0-corrected-native-fallback-FULL-UPGRADED.zip",
+  "scope": "experimental complete-source enhancement; no native qualification claim",
+  "features": [
+    "optional cost-aware admission with expected reuse horizon",
+    "all accepted candidate arities considered before forecast selection",
+    "signed paired work accounting over mutually solved development tasks",
+    "round-level acquisition work includes failed and rejected candidate trials",
+    "independent local journal forecast audit and adversarial tests"
+  ],
+  "tests": {
+    "full_python_unittest_suite": {
+      "status": "passed",
+      "count": 238,
+      "duration_seconds": 131.854,
+      "runner": "python -m unittest discover -s tests -p test_*.py"
+    },
+    "new_v190_python_tests": {
+      "status": "passed",
+      "count": 15
+    },
+    "rust_cargo_test": {
+      "status": "not_run",
+      "reason": "cargo and rustc are not installed"
+    },
+    "rust_release_build": {
+      "status": "not_run",
+      "reason": "cargo and rustc are not installed"
+    },
+    "native_abstraction_learning": {
+      "status": "not_run"
+    },
+    "external_independent_transfer": {
+      "status": "not_run"
+    }
+  },
+  "limits": [
+    "measured search expansions are lower-bound learning costs, not total CPU or memory costs",
+    "forecast reuse horizon is assumed rather than observed",
+    "local journal receipts are not independently authenticated",
+    "finite-example validity does not prove universal correctness"
+  ],
+  "utc_created": "2026-10-21T10:07:09.913956+00:00"
+}

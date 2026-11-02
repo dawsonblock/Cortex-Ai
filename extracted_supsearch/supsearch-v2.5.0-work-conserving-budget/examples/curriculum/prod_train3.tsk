@@ -1,0 +1,12 @@
+synthetic product of 3 Church numerals; not an independent benchmark
+---
+@main(λf.λx.f(f(x)), λf.λx.f(f(f(x))), λf.λx.f(x))
+= λf.λx.f(f(f(f(f(f(x))))))
+@main(λf.λx.f(f(f(x))), λf.λx.f(x), λf.λx.f(f(x)))
+= λf.λx.f(f(f(f(f(f(x))))))
+@main(λf.λx.f(x), λf.λx.f(f(x)), λf.λx.f(f(f(x))))
+= λf.λx.f(f(f(f(f(f(x))))))
+@main(λf.λx.f(f(x)), λf.λx.f(f(f(x))), λf.λx.f(x))
+= λf.λx.f(f(f(f(f(f(x))))))
+@main(λf.λx.f(f(f(x))), λf.λx.f(x), λf.λx.f(f(x)))
+= λf.λx.f(f(f(f(f(f(x))))))
